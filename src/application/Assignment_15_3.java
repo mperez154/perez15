@@ -16,6 +16,7 @@ public class Assignment_15_3 extends Application {
 		primaryStage.setTitle("Marco's Bouncing Ball Assignment");	//Refer to Chapter 15, page 613
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		System.out.println("TEST");
 		
 	}
 	
