@@ -14,9 +14,9 @@ public class MyLinePane extends Pane {
 	private Button btLeft = new Button("Left");
 	private Button btUp = new Button("Up");
 	private Button btDown = new Button("Down");
+	Pane pane = new Pane();
 
 	public MyLinePane() {
-
 		// Create a pane and set it's properties
 		getChildren().addAll(btRight, btLeft, btUp, btDown);
 
@@ -38,8 +38,9 @@ public class MyLinePane extends Pane {
 		btLeft.setOnAction(e -> moveLeft());
 		btUp.setOnAction(e -> moveUp());
 		btDown.setOnAction(e -> moveDown());
+		
 
-	}
+	}	
 
 	// Line move methods
 	protected void moveRight() {
@@ -47,7 +48,7 @@ public class MyLinePane extends Pane {
 			Line line = new Line(currentX, currentY, currentX + lineDrawLength, currentY);
 			line.setStrokeWidth(5);
 			line.setStroke(Color.GREEN);
-			getChildren().add(line);
+			pane.getChildren().add(line);
 			currentX = currentX + lineDrawLength;
 		}
 
